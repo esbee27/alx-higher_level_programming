@@ -37,14 +37,14 @@ class Rectangle:
 
         """
 
-        if type(width) != int:
+        if type(value) != int:
             raise TypeError('width must be an integer')
-        if width < 0:
+        if value < 0:
             raise ValueError('width must be >= 0')
         self.__width = value
 
     @property
-    def width(self):
+    def height(self):
         """Defines height of the private class width
         A private class
 
@@ -60,8 +60,8 @@ class Rectangle:
 
         """
 
-        if type(height) != int:
+        if type(value) != int:
             raise TypeError('height must be an integer')
-        if height < 0:
+        if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
