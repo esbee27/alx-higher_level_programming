@@ -3,8 +3,10 @@
 Defines a rectangle class
 """
 
-
-
 class Rectangle:
-    """An empty rectangle class"""
+    """An empty rectangle class
+    Called rectangle
+    
+    """
+
     pass
