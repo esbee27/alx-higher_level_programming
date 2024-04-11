@@ -12,7 +12,7 @@ class Square:
             size: length of the sides of the square.
         """
 
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
@@ -30,7 +30,7 @@ class Square:
             value: the value of the size
 
         """
-        if type(size) != int:
+        if type(value) != int:
             raise TypeError('size must be an integer')
         if value < 0:
             raise ValueError('size must be >= 0')
