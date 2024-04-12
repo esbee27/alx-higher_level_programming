@@ -1,0 +1,20 @@
+~Add integer module
+add_integer = __import__('0-add_integer').add_integer
+
+>>>add_integer(3, 5)
+11
+
+>>> add_integer(7, -3)
+4
+
+>>> add_integer(-7, -3)
+-10
+
+>>> add_integer(1.2, 0.8)
+2
+
+>>> add_integer(None)
+TypeError: must be an integer
+
+>>> add_integer("Code", "Totor")
+TypeError: a and b must be integers
