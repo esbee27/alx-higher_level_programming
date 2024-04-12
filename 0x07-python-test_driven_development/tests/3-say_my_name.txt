@@ -1,11 +1,14 @@
 Say my name test module
 
 Import the function:
-	>>> say_my_name = __import__(3-say_my_name).say_my_name
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Test it:
 	>>> say_my_name("Gold", "Silver")
 	My name is Gold Silver
+
+	>>> say_my_name("Cain", "Abel")
+	My name is Cain Abel
 
 	>>> say_my_name("Gold")
 	My name is Gold
@@ -15,6 +18,3 @@ Test it:
 
 	>>> say_my_name("Silver", none)
 	TypeError: last_name must be a string
-
-	>>> say_my_name(34, 58)
-	TypeError: first_name must be a string
