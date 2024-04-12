@@ -13,11 +13,14 @@ Test it:
 	>>> add_integer(-7, -3)
 	-10
 
-	>>> add_integer(1.2, 0.8)
-	2
+	>>> add_integer(1.2, 5)
+	6.2
 
 	>>> add_integer(None)
 	TypeError: must be an integer
+
+	>>> add_integer(float('nan'))
+	ValueErroe: cannot convert float to an integer
 
 	>>> add_integer("Code", "Totor")
 	TypeError: a and b must be integers
