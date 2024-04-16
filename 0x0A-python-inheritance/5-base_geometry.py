@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-    """A module that contains an
-    empty class
-    """
+"""A module that contains an
+empty class
+"""
 
-    class BaseGeometry:
-        """An empty class"""
-        pass
+class BaseGeometry:
+    """An empty class"""
+
+    pass
