@@ -4,11 +4,9 @@ message
 """
 
 class BaseGeometry:
-    """An empty class"""
-
-    pass
+    """Raises an exception
+    error message
+    """
 
     def area(self):
-        """Raises an exception error"""
-       
        raise Exception("area() is not implemented")

@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 """A module that raises an exception
-    message
-    """
+message
+"""
 
-    class BaseGeometry:
-        """DEfines a geometry"""
+class BaseGeometry:
+    """DEfines a geometry"""
 
-        def area(self):
-        """Raises an exception error"""
-            raise Exception('area() is not implemented')
-
-        def integer_validator(self, name, value):
+    def area(self):
+        raise Exception('area() is not implemented')
+    
+    def integer_validator(self, name, value):
         """Validates value."""
 
         if type(value) is not int:
