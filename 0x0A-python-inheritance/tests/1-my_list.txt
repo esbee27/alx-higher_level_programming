@@ -1,0 +1,21 @@
+my_list module
+
+import function:
+	>>> print_sorted = __import__('1-my_list').print_sorted
+
+test it:
+	>>> print_sorted(6, 3, 9, 2)
+	[2, 3, 6, 9]
+
+	>>> print_sorted(None)
+	TypeError: cannot be empty
+
+	>>> print_sorted(3)
+	[3]
+
+	>>> print_sorted(5, -6, 2, -9)
+	[-9, -6, 2, 5]
+
+
+
+>>> 

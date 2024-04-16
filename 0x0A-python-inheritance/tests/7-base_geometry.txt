@@ -1,0 +1,20 @@
+Base_geometry module
+
+import class:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Test it:
+	>>> bg = BaseGeometry()
+
+	>>> bg.integer_validator("name", 14)
+
+	>>> bg.integer_validator("distance", -7)
+	ValueError: distance must be greater than 0
+
+	>>> bg.integer_validator("width")
+	TypeError: value not found
+
+	>>> bg.integer_validator("age", -5)
+	ValueError: age must be greater than 0
+
+	>>> bg.integer_validator("name", "John")
+	TypeError: name must be an integer
