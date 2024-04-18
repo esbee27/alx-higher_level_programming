@@ -3,6 +3,7 @@
 a student
 """
 
+
 class Student:
     """Defines a student
     Public Attributes:

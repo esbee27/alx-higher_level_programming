@@ -3,6 +3,7 @@
 The file is filename
 """
 
+
 def read_file(filename=""):
     """Reads a text file and prints to stdout
 

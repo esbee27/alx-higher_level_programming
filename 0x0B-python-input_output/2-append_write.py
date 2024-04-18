@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Appends a str to a file"""
 
+
 def append_write(filename="", text=""):
     """Appends a str"""
 

@@ -5,6 +5,7 @@ The string is f
 
 import json
 
+
 def save_to_json_file(my_obj, filename):
     """Saves a string in a file
     Args:
