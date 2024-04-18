@@ -5,6 +5,7 @@ an oject
 
 import json
 
+
 def load_from_json_file(filename):
     """Converts json file to
     to an object
