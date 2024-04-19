@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""A rectangle class that 
+"""A rectangle class that
 inherits from the base class
 """
+
 
 class Rectangle(Base):
     """Inherits from the base class
@@ -12,7 +13,6 @@ class Rectangle(Base):
         - x
         - y
     """
-
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes"""
@@ -35,7 +35,7 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-     @property
+    @property
     def height(self):
         """gets the width of the rectangle"""
         return self.__height
@@ -48,7 +48,7 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
-     @property
+    @property
     def x(self):
         """gets the x coordinate of the rectangle"""
         return self.__x
