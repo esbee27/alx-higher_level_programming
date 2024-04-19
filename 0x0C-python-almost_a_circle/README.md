@@ -1,1 +1,1 @@
-A directory to test all knowledge of python
+A project that tests ALX python acquired knowledge
