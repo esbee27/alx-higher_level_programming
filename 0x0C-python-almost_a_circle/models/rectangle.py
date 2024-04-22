@@ -80,8 +80,14 @@ class Rectangle(Base):
 
     def display(self):
         """Prints the rectangle to the stdout"""
-        for i in range(0, __width):
-            for j in range(0, __height):
+
+        for y in range(0, self.__y):
+            print()
+
+        for i in range(0, self.__height):
+            for x in range(0, self.__x):
+                print(" ", end="")
+            for j in range(0, self.__width):
                 print("#", end="")
             print()
 
@@ -90,3 +96,40 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                        self.__y, self.__width,
                                                        self.__height)
+
+    def update(self, *args, **kwargs):
+        """Updates the values using args and kwargs"""
+        if len(args) != 0 and args is not None:
+            if len(args) >= 1:
+                if type(args[0]) != int and args[0] is not None:
+                    raise TypeError("id must be an integer")
+                self.id = args[0]
+            if len(args) > 1:
+                self.width = args[1]
+            if len(args) > 2:
+                self.height = args[2]
+            if len(args) > 3:
+                self.x = args[3]
+            if len(args) > 4:
+                self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    if type(value) != int and value is not None:
+                        raise TypeError("id must be an integer")
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of Rectangle"""
+        
+        a_dict = {"id": self.id, "width": self.width, "height": self.height,
+                  "x": self.x, "y": self.y}
+        return a_dict
