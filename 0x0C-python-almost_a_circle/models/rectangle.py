@@ -3,6 +3,8 @@
 inherits from the base class
 """
 
+from models.base import Base
+
 
 class Rectangle(Base):
     """Inherits from the base class
