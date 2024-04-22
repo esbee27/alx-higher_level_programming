@@ -3,7 +3,6 @@
 on some properties of Rectangle
 """
 
-import json
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -27,7 +26,7 @@ class Square(Rectangle):
                                                 self.__width)
         return str
 
-     @property
+    @property
     def size(self):
         """gets the width of the rectangle"""
         return self.size
