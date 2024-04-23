@@ -19,29 +19,29 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes"""
 
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
         super().__init__(id)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
         """gets the width of the rectangle"""
-        return self.__width
+        return self.width
 
     @width.setter
     def width(self, value):
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
+        self.width = value
 
     @property
     def height(self):
         """gets the width of the rectangle"""
-        return self.__height
+        return self.height
 
     @height.setter
     def height(self, value):
@@ -49,12 +49,12 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if height <= 0:
             raise ValueError("height must be > 0")
-        self.__height = value
+        self.height = value
 
     @property
     def x(self):
         """gets the x coordinate of the rectangle"""
-        return self.__x
+        return self.x
 
     @x.setter
     def x(self, value):
@@ -62,12 +62,12 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
-        self.__x = value
+        self.x = value
 
     @property
     def y(self):
         """gets the x coordinate of the rectangle"""
-        return self.__y
+        return self.y
 
     @x.setter
     def y(self, value):
@@ -75,7 +75,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
-        self.__y = value
+        self.y = value
 
     def area(self):
         """Returns the area of the rectangle"""
