@@ -17,19 +17,19 @@ class Square(Rectangle):
             - x
             - y
         """
-        self.size = size
+        self.__size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """Returns a string representation of self"""
-        str = "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+        s = "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                 self.__width)
-        return str
+        return s
 
     @property
     def size(self):
         """gets the width of the rectangle"""
-        return self.size
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -37,8 +37,8 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
-        self.__height = value
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """Updates the values using args and kwargs"""
@@ -46,22 +46,22 @@ class Square(Rectangle):
             if len(args) >= 1:
                 if type(args[0]) != int and args[0] is not None:
                     raise TypeError("id must be an integer")
-                self.id = args[0]
+                self.__id = args[0]
             if len(args) > 1:
-                self.size = args[1]
+                self.__size = args[1]
             if len(args) > 2:
-                self.x = args[2]
+                self.__x = args[2]
             if len(args) > 3:
-                self.y = args[3]
+                self.__y = args[3]
         else:
             for key, value in kwargs.items():
                 if key == "id":
                     if type(value) != int and value is not None:
                         raise TypeError("id must be an integer")
-                    self.id = value
+                    self.__id = value
                 if key == "size":
-                    self.width = value
+                    self.__width = value
                 if key == "x":
-                    self.x = value
+                    self.__x = value
                 if key == "y":
-                    self.y = value
+                    self.__y = value
