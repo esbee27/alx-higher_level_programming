@@ -94,13 +94,11 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-
     def __str__(self):
         """Prints out the string representation of the rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                        self.__y, self.__width,
-                                                       self.__height)
-
+                                                       self.__height
 
     def update(self, *args, **kwargs):
         """Updates the values using args and kwargs"""
