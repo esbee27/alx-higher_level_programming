@@ -54,7 +54,7 @@ class Rectangle(Base):
     @property
     def x(self):
         """gets the x coordinate of the rectangle"""
-        return self.x
+        return self.__x
 
     @x.setter
     def x(self, value):
@@ -62,12 +62,12 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
-        self.x = value
+        self.__x = value
 
     @property
     def y(self):
         """gets the x coordinate of the rectangle"""
-        return self.y
+        return self.__y
 
     @x.setter
     def y(self, value):
@@ -75,7 +75,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
-        self.y = value
+        self.__y = value
 
     def area(self):
         """Returns the area of the rectangle"""
@@ -98,10 +98,11 @@ class Rectangle(Base):
         """Prints out the string representation of the rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                        self.__y, self.__width,
-                                                       self.__height
+                                                       self.__height)
 
     def update(self, *args, **kwargs):
         """Updates the values using args and kwargs"""
+
         if len(args) != 0 and args is not None:
             if len(args) >= 1:
                 if type(args[0]) != int and args[0] is not None:
