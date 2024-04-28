@@ -12,7 +12,7 @@ class Rectangle(Base):
     Args:
         Private classes
         _ width
-        - height
+        - height<F11>
         - x
         - y
     """
@@ -55,7 +55,7 @@ class Rectangle(Base):
     @property
     def x(self):
         """gets the x coordinate of the rectangle"""
-        return self.__x
+        return self.x
 
     @x.setter
     def x(self, value):
@@ -63,21 +63,20 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
-        self.__x = value
+        self.x = value
 
     @property
     def y(self):
         """gets the x coordinate of the rectangle"""
-        return self.__y
+        return self.y
 
-    @x.setter
+    @y.setter
     def y(self, value):
         if type(value) != int:
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
-        self.__y = value
-
+        self.y = value
     def area(self):
         """Returns the area of the rectangle"""
         return self.__width * self.__height
