@@ -3,7 +3,9 @@
     from an inherited class
     """
 
-    class Mylist(list):
+from lookup import list
+
+class Mylist(list):
         """A class that inherits a class called list"""
 
         def print_sorted(self):
