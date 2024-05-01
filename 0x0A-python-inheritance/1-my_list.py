@@ -3,10 +3,10 @@
     from an inherited class
     """
 
-from lookup import list
-
 class Mylist(list):
         """A class that inherits a class called list"""
 
         def print_sorted(self):
+            """prints a sorted list"""
+
             print(sorted(self))
