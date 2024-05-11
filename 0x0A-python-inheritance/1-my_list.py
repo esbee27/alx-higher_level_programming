@@ -3,7 +3,7 @@
     from an inherited class
     """
 
-class Mylist(list):
+class MyList(list):
         """A class that inherits a class called list"""
 
         def print_sorted(self):
