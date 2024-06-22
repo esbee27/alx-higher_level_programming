@@ -8,5 +8,5 @@ if (x <= 3) {
   console.log(0);
 } else {
   process.argv.sort((a, b) => b - a);
-  console.log(args);
+  console.log(z);
 }
