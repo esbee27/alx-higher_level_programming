@@ -3,6 +3,7 @@
 from urllib import parse, request
 from sys import argv
 
+
 url = argv[1]
 values = {'email': argv[2]}
 eml = parse.urlencode(values)
